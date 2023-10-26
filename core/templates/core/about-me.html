@@ -1,6 +1,23 @@
 {% extends "core/base.html" %}
-{% block title %}About Me{% endblock title %}
+{% block title %}
+    About Me
+{% endblock title %}
+{% block header_title %}
+    About Me
+{% endblock header_title %}
+{% block header_sub %}
+    Who is Eduardo and what does he do?
+{% endblock header_sub %}
+{% load static %}
+{% block header_bg %}{% static 'core/img/about-bg.jpg' %}{% endblock header_bg %}
 {% block content %}
-<h2>About Me</h2>
-<p>I am Edu and I am learning Django.</p>
+  <div class="row">
+      <div class="col-2 ">
+          <img src="{% static 'core/img/avatar.jpg' %}" class="img-fluid avatar" alt="Avatar">
+      </div>
+      <div class="col offset-lg-1">
+          <h2 class="display-5 font-weight-bold">Eduardo Valero Viella <span class="text-muted">- @valevil</span></h2>
+        <p >{% lorem 5 p random %}</p>
+      </div>
+  </div>
 {% endblock content %}
