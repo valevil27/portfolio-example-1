@@ -1,8 +1,21 @@
-
-<h1> Mi web personal </h1>
-<ul>
-    <li><a href="/">Portada</a></li>
-    <li><a href="/about-me/">Acerca De</a></li>
-    <li><a href="/portfolio/">Portfolio</a></li>
-    <li><a href="/contact/">Contacto</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock title %} - MyPersonalWebpage</title>
+  </head>
+  <body>
+    <!-- Header and Menu  -->
+    <h1>My Personal Webpage</h1>
+    <ul>
+      <li><a href="{% url "home" %}">Home</a></li>
+      <li><a href="{% url "about" %}">About Me</a></li>
+      <li><a href="{% url "portfolio" %}">Portfolio</a></li>
+      <li><a href="{% url "contact" %}">Contact Me</a></li>
+    </ul>
+    <!-- Content -->
+    {% block content %}
+    {% endblock content %}
+  </body>
+</html>

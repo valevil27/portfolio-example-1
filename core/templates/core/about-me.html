@@ -1,10 +1,6 @@
-<h1>Mi web personal</h1>
-<ul>
-  <li><a href="/">Portada</a></li>
-  <li><a href="/about-me/">Acerca De</a></li>
-  <li><a href="/portfolio/">Portfolio</a></li>
-  <li><a href="/contact/">Contacto</a></li>
-</ul>
-
-<h2>Acerca de</h2>
-<p>Me llamo Eduardo y soy programador</p>
+{% extends "core/base.html" %}
+{% block title %}About Me{% endblock title %}
+{% block content %}
+<h2>About Me</h2>
+<p>I am Edu and I am learning Django.</p>
+{% endblock content %}
