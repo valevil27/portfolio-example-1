@@ -1,13 +1,7 @@
 {% extends "core/base.html" %}
-{% block title %}
-Portfolio
-{% endblock title %}
-{% block header_title %}
-Portfolio
-{% endblock header_title %}
-{% block header_sub %}
-TensorFlow, Django, Flask, Pandas...
-{% endblock header_sub %}
+{% block title %}Portfolio{% endblock title %}
+{% block header_title %}Portfolio{% endblock header_title %}
+{% block header_sub %}TensorFlow, Django, Flask, Pandas...{% endblock header_sub %}
 {% load static %}
 {% block header_bg %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock header_bg %}
 {% block content %}
@@ -20,9 +14,10 @@ TensorFlow, Django, Flask, Pandas...
     <div class="col-lg-7 col-md-8">
         <h2 class="section-heading title">{{ project.title }}</h2>
         <p>{{ project.description }}</p>
-        <!-- <p>
-                <a href="https://google.com">Más información</a>
-            </p> -->
+        {% if project.info %}
+        <p><a href="{{ project.info }}">Más información...</a></p>
+        {% endif %}
+
     </div>
 </div>
 {% endfor %}

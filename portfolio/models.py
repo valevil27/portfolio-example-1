@@ -9,6 +9,7 @@ class Project(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Creación")
     # auto_now is executed when we update the model
     updated = models.DateTimeField(auto_now=True, verbose_name="Última Edición")
+    info = models.URLField(blank=True, null=True, verbose_name="Más Info")
     
     class Meta:
         verbose_name = "proyecto"
